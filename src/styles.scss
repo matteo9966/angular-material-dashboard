@@ -1,1 +1,67 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat; // Plus imports for other components in your app.
+
+@use "./material/themes/light" as l;
+@use "./material/themes/dark" as d;
+@use "./material/material-components/index" as components;
+
+//not material components
+
+@use './styles/gradient-cards';
+@use './styles/form-card';
+
+// @use './material/material-components/sidenav' as sidenav;
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $angular-material-project-primary: mat.define-palette(mat.$indigo-palette);
+// $angular-material-project-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+// $angular-material-project-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+// $angular-material-project-theme: mat.define-light-theme((
+//   color: (
+//     primary: $angular-material-project-primary,
+//     accent: $angular-material-project-accent,
+//     warn: $angular-material-project-warn,
+//   )
+// ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+$global-font: "'Montserrat', sans-serif";
+$custom-typography-font: mat.define-typography-config(
+  $font-family: $global-font,
+);
+@include mat.all-component-themes(l.$my-app-light-theme);
+@include mat.all-component-typographies($custom-typography-font);
+@include mat.typography-hierarchy($custom-typography-font);
+// @include sidenav.theme(l.$my-app-light-theme);
+
+@include components.theme(l.$my-app-light-theme);
+.dark {
+  @include mat.all-component-colors(d.$my-app-dark-theme);
+  @include components.theme(d.$my-app-dark-theme);
+}
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

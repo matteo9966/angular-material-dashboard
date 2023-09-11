@@ -1,0 +1,13 @@
+<app-sidebar-header />
+<mat-divider></mat-divider>
+<mat-list>
+  <a mat-list-item *ngFor="let page of pages" [routerLink]="[page.routerLink]">
+    <mat-icon matListItemIcon class="sidenav-icon">{{ page.icon }}</mat-icon>
+    <div matListItemTitle>
+      <span class="list-item-title"> {{ page.label }} </span>
+    </div>
+    <button matListItemMeta class="navbar-meta-button">
+      <mat-icon class="mat-24" class="sidenav-icon">chevron_right</mat-icon>
+    </button>
+  </a>
+</mat-list>

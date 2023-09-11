@@ -1,0 +1,22 @@
+@use "@angular/material" as mat;
+@use "sass:map";
+@mixin theme($theme){
+    $color-config: mat.get-color-config($theme);
+    $is-dark-theme: map.get($color-config, "is-dark");
+    $primary-palette: map.get($color-config, "primary");
+    @debug $primary-palette;
+    $color-1: mat.get-color-from-palette($primary-palette, 400);
+    $color-2: mat.get-color-from-palette($primary-palette, 900);
+    $contrast:mat.get-color-from-palette($primary-palette,"50-contrast");
+
+    .footer-container{
+        background: rgb(53, 184, 218);
+        background: linear-gradient(152deg, $color-1 3%, $color-2 100%);
+    }
+
+    .footer-text{
+        &.footer-text-color{
+           color: $contrast;
+        }
+    }
+}

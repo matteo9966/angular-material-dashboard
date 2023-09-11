@@ -1,0 +1,12 @@
+mat-card.form-card{
+    border-radius: 5px;
+    outline: 1px solid gray;
+    padding: 1rem;
+
+}
+
+.dark{
+    mat-card.form-card{
+      background-color: black;
+    }  
+}

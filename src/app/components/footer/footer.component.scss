@@ -1,0 +1,12 @@
+.footer-container {
+    display: flex;
+  .content {
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+}

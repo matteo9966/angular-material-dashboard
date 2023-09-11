@@ -1,0 +1,26 @@
+.gradient-1 {
+    background-image: linear-gradient(to left bottom, #cd42eb, #d26aea, #d58ae8, #d8a7e4, #dac2e0);
+  }
+  
+  .gradient-2 {
+    background-image: linear-gradient(to left bottom, #7c42eb, #816ff1, #9293f0, #acb4ea, #cfd2de);
+  }
+  
+  .gradient-3 {
+    background-image: linear-gradient(to right, #008e13, #3da540, #61bc65, #83d48a, #a5ebae);
+  }
+  
+  .gradient-4 {
+    background-image: linear-gradient(to right, #b92034, #c94852, #d66870, #e2878d, #eba5ab);
+  }
+  
+  .gradient-5 {
+    background-image: linear-gradient(to right, #c77c06, #d1902d, #dba349, #e6b664, #f0c97f);
+  }
+
+  .dark{
+    .gradient-1,.gradient-2,.gradient-3,.gradient-4,.gradient-5{
+        background-image: linear-gradient(to right top, #1a1a1a, #262626, #333333, #404040, #4e4e4e);;
+    }
+  }
+  

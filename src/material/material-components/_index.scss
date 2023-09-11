@@ -1,0 +1,10 @@
+@use "./sidenav" as sidenav;
+@use './footer' as footer;
+@use '@angular/material' as mat;
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include sidenav.theme($theme);
+    @include footer.theme($theme);
+  }
+}
