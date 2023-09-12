@@ -11,4 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class GradientCardComponent {
  @Input() gradientClass:string='default-gradient';
+ @Input() iconSrc!:string;
+ @Input() title!:string;
+ @Input() subtitle!:string;
+ 
 }

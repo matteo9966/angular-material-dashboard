@@ -1,0 +1,18 @@
+@use '../../../styles/variables' as v;
+.dashboard-menu{
+    border-radius: v.$global-border-radius;
+    padding:5px;
+    height: 100%;
+}
+
+.list-container{
+    padding-top: 1rem;
+    .title{
+        margin: 0;
+        margin-left: 1.5rem;
+        padding: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+}

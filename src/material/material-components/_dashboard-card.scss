@@ -1,0 +1,21 @@
+// home - 2 second home
+@use "@angular/material" as mat;
+@use "sass:map";
+@use 'sass:color';
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  $is-dark-theme: map.get($color-config, "is-dark");
+  $primary-palette: map.get($color-config, "primary");
+  $color-1: mat.get-color-from-palette($primary-palette, "A100");
+  $color-2: mat.get-color-from-palette($primary-palette, "A700");
+
+  .dashboard-card-background{
+    background: $color-1;
+    background: linear-gradient(86deg, white 0%, $color-1 2% ,  $color-2 98%,  white 100%);
+  }
+   
+  .image-text-background{
+      background: transparentize(darken($color-1, 20%), 0.5); 
+  }
+
+}

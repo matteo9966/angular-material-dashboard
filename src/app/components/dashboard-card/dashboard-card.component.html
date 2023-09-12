@@ -1,0 +1,27 @@
+<mat-card class="dashboard-card dashboard-card-background">
+  <mat-card-content class="mat-card-content">
+    <div class="content-container">
+      <div class="image-container">
+        <img
+          class="image"
+          [src]="imageSrc"
+          alt="Photo of a Shiba Inu"
+        />
+      </div>
+      <div class="image-text image-text-background">{{title}}</div>
+    </div>
+    <p class="description">
+     {{description}}
+    </p>
+    <div class="extra-info">
+      <div class="prices">
+        <span class="small">price/from</span>
+        <span class="bold">{{price}}</span>
+      </div>
+      <div class="locations">
+        <span>{{location}}</span>
+        <mat-icon>pin_drop</mat-icon>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

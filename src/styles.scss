@@ -1,10 +1,12 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
+@use './styles/reset';
 @use "@angular/material" as mat; // Plus imports for other components in your app.
 
 @use "./material/themes/light" as l;
 @use "./material/themes/dark" as d;
 @use "./material/material-components/index" as components;
+@use './material/material-components/index2' as components2; // this is the components of the second home
 
 //not material components
 
@@ -50,18 +52,14 @@ $custom-typography-font: mat.define-typography-config(
 // @include sidenav.theme(l.$my-app-light-theme);
 
 @include components.theme(l.$my-app-light-theme);
+@include components2.theme(l.$my-app-light-theme);
+
+
+
 .dark {
   @include mat.all-component-colors(d.$my-app-dark-theme);
+  @include components2.theme(d.$my-app-dark-theme);
   @include components.theme(d.$my-app-dark-theme);
 }
 
-/* You can add global styles to this file, and also import other style files */
 
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
