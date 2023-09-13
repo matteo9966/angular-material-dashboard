@@ -1,0 +1,3 @@
+<mat-chip-listbox [multiple]="true">
+    <mat-chip-option *ngFor="let option of allOptions" selected (selectionChange)="onSelectedChange($event)">{{option}}</mat-chip-option>
+</mat-chip-listbox>

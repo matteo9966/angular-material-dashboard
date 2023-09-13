@@ -1,0 +1,32 @@
+.background-image-container {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+}
+
+.image-section {
+  width: 100%;
+  min-height: 300px;
+  max-height: 500px;
+  position: relative;
+  z-index: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  z-index: 1;
+  width: 90%;
+  margin-inline: auto;
+  top:-30px;
+}

@@ -1,0 +1,12 @@
+table{
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-container{
+    overflow: auto;
+}
+tr,td,th{
+    vertical-align: middle;
+}

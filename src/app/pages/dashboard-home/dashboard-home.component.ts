@@ -2,11 +2,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardCardComponent } from 'src/app/components/dashboard-card/dashboard-card.component';
 import { DashboardCard } from 'src/app/models/dashboard-card.interface';
+import { BackgroundImageCardComponent } from 'src/app/components/background-image-card/background-image-card.component';
+import { MatIconModule } from '@angular/material/icon';
+import { BackgroundImageCardHeaderComponent } from 'src/app/components/background-image-card-header/background-image-card-header.component';
 
 @Component({
   selector: 'app-dashboard-home',
   standalone: true,
-  imports: [CommonModule, DashboardCardComponent],
+  imports: [CommonModule, DashboardCardComponent,BackgroundImageCardComponent,MatIconModule,BackgroundImageCardHeaderComponent],
   templateUrl: './dashboard-home.component.html',
   styleUrls: ['./dashboard-home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

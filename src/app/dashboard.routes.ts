@@ -9,6 +9,13 @@ export const dashboardroutes: Routes = [
       ),
   },
   {
+    path: 'table-data',
+    loadComponent: () =>
+      import('./pages/dashboard-table-data/dashboard-table-data.component').then(
+        (c) => c.DashboardTableDataComponent
+      ),
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'home',

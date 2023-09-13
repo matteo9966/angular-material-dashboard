@@ -1,3 +1,20 @@
 .accordion-panel-item{
     background-color: transparent;
 }
+
+.menu-list-icon{
+    margin-right: 20px;
+}
+
+.link{
+    cursor: pointer;
+
+    .content{
+        border-bottom: 1px solid transparent;
+    }
+
+    &.active .content{
+        font-weight: bold;
+        border-bottom: 1px solid blue;
+    }
+}

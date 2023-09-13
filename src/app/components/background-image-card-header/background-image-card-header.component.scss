@@ -1,0 +1,14 @@
+.header-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+  }
+  
+  .title{
+    margin:0;
+  }
+  
+  .icon{
+    transform: scale(1.5);
+  }
