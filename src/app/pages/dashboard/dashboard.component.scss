@@ -1,4 +1,12 @@
-:host{
-    display: block;
-    padding:1rem;
+@use '../../../styles/variables' as v;
+.sidenav-content-container{
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+    padding: v.$global-page-padding-lg;
+}
+
+.sidenav-content{
+    padding: 0.5rem;
+    height: 100vh;
 }

@@ -10,6 +10,14 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./dashboard.routes').then((d) => d.dashboardroutes),
   },
+  //TODO { 
+  //   path:'login'
+  // },
+  {
+    path: 'signup',
+    loadComponent: () =>
+      import('./pages/signup/signup.component').then((c) => c.SignupComponent),
+  },
 
   {
     path: '',

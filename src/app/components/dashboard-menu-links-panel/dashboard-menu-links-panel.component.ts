@@ -20,11 +20,11 @@ export class DashboardMenuLinksPanelComponent {
       links: [
         {
           label: 'Home',
-          routerLink: 'dashboard/home',
+          routerLink: 'home',
         },
         {
           label: 'Table data',
-          routerLink: 'dashboard/table-data',
+          routerLink: 'table-data',
         },
       ],
     },

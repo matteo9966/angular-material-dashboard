@@ -1,7 +1,7 @@
 <app-table-display-columns
   [(options)]="displayedColumns"
 ></app-table-display-columns>
-<div class="table-container">
+<div class="table-container" *ngIf="showTable;else nodata">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
@@ -34,3 +34,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
+
+<ng-template #nodata>
+    <div>
+        No data to display
+    </div>
+</ng-template>

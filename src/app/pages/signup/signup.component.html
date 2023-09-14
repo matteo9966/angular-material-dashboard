@@ -1,0 +1,62 @@
+<div class="page-content">
+  <app-title-card></app-title-card>
+  <app-form-wrapper>
+    <div class="header">
+      <h2>Signup</h2>
+      <p>One account connected to everything</p>
+    </div>
+    <form class="form" [formGroup]="form">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="emailControl?.errors"
+        >{{emailControl.errors|json}}</mat-error
+      >
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" #passwordInput />
+        <mat-hint align="end"
+          >min length: {{ passwordInput.value.length }}/6</mat-hint
+        >
+        <mat-error *ngIf="passwordControl?.errors"
+          >{{passwordControl.errors|json}}</mat-error
+        >
+     
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Confirm password</mat-label>
+        <input matInput formControlName="confirmPassword" />
+        <mat-error *ngIf="confirmPasswordControl?.errors"
+        >{{confirmPasswordControl.errors|json}}</mat-error
+      >
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+        <input matInput type="text" (input)="countryChange($event)">
+         <mat-label>This is the label</mat-label>
+         <div>hello i am inside the form field</div>
+      </mat-form-field>
+
+      <div class="actions">
+        <button mat-raised-button color="primary" (click)="resetForm()" type="button">Cancel</button>
+        <button
+          #submitbtn
+          mat-raised-button
+          color="accent"
+          type="submit"
+          (click)="submit()"
+          
+        >
+          Signup
+        </button>
+      </div>
+    </form>
+  </app-form-wrapper>
+
+  <div class="copyright">
+    Copyright 2017-2023 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Ipsa aspernatur esse ad quae obcaecati quas culpa vero blanditiis quidem
+    dolorem eligendi, consequatur maiores aut nihil.
+  </div>
+</div>

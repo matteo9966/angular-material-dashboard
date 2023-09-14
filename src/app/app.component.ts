@@ -9,12 +9,13 @@ import {MatDividerModule} from '@angular/material/divider';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidebar/sidenav/sidenav.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FixedFabButtonComponent } from "./components/fixed-fab-button/fixed-fab-button.component";
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet,MatSidenavModule,MatListModule,MatIconModule,SidebarHeaderComponent,MatDividerModule,ToolbarComponent,SidenavComponent,FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [CommonModule, RouterOutlet, MatSidenavModule, MatListModule, MatIconModule, SidebarHeaderComponent, MatDividerModule, ToolbarComponent, SidenavComponent, FooterComponent, FixedFabButtonComponent]
 })
 export class AppComponent {
   title = 'angular-material-project';

@@ -1,10 +1,12 @@
 @use "./dashboard-menu" as dashboard;
 @use './dashboard-card' as dcard;
+@use './scrollbar' as scrollbar;
 @use "@angular/material" as mat;
 @mixin theme($theme) {
   $color-config: mat.get-color-config($theme);
   @if $color-config != null {
     @include dashboard.theme($theme);
     @include dcard.theme($theme);
+    @include scrollbar.theme($theme);
   }
 }

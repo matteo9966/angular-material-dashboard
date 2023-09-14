@@ -25,4 +25,12 @@ export class TableComponent {
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
   ];
+
+  get showTable(){
+    if(this.displayedColumns.length==0 || !this.dataSource || this.dataSource.length==0){
+      return false
+    }
+    return true
+  }
+
 }

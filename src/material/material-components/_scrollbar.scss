@@ -1,0 +1,32 @@
+/* Works on Firefox */
+@use "@angular/material" as mat;
+@use "sass:map";
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  $is-dark-theme: map.get($color-config, "is-dark");
+  $primary-palette: map.get($color-config, "primary");
+  // @debug $primary-palette;
+  $color-1: mat.get-color-from-palette($primary-palette, 400);
+  $color-2: mat.get-color-from-palette($primary-palette, 900);
+  $contrast: mat.get-color-from-palette($primary-palette, "50-contrast");
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $contrast $color-1;
+  }
+
+  body,
+  html,* {
+    &::-webkit-scrollbar {
+      width: 6px; /* width of the entire scrollbar */
+    }
+    &::-webkit-scrollbar-track {
+      background: $contrast; /* color of the tracking area */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $contrast; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+      border: 3px solid $color-1; /* creates padding around scroll thumb */
+    }
+  }
+}

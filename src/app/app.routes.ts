@@ -8,13 +8,20 @@ export const routes: Routes = [
     loadChildren: () => import('./home.routes').then((r) => r.routes),
   },
   {
-    path: 'home-two',
+    path: 'dashboard',
     loadComponent: () =>
-      import('./pages/home-two/home-two.component').then(
-        (c) => c.HomeTwoComponent
+      import('./pages/dashboard/dashboard.component').then(
+        (c) => c.DashboardComponent
       ),
-    loadChildren: () => import('./home-two.routes').then((r) => r.routes),
+    loadChildren: () =>
+      import('./dashboard.routes').then((r) => r.dashboardroutes),
   },
+  {
+    path: 'signup',
+    loadComponent: () =>
+      import('./pages/signup/signup.component').then((c) => c.SignupComponent),
+  },
+
   {
     path: 'main',
     loadComponent: () =>
@@ -23,6 +30,6 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/main',
+    redirectTo: '/dashboard',
   },
 ];
