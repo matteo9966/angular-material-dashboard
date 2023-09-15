@@ -1,0 +1,20 @@
+<div class="autocomplete-container">
+  <mat-form-field appearance="outline">
+    <input
+      #nativeInput
+      matInput
+      [matAutocomplete]="autocomplete"
+      [formControl]="searchInput"
+      placeholder="Choose your country"
+      (input)="inputChanges()"
+    />
+    <mat-autocomplete
+      #autocomplete="matAutocomplete"
+      requireSelection
+    >
+      <mat-option *ngFor="let option of options | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

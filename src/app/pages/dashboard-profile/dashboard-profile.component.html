@@ -1,0 +1,96 @@
+<div class="dashboard-profile-container">
+  <app-background-image-card
+    [backgroundSrc]="
+      'https://images.unsplash.com/photo-1682686581362-796145f0e123?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    "
+  >
+    <section class="header">
+      <div class="picture-box-global">
+        <img [src]="profilePicture" alt="profile" />
+      </div>
+      <div class="title-section">
+        <h2 class="title">Alexa Amazon</h2>
+        <p class="subtitle">CEO and Business leader.</p>
+      </div>
+      <div class="actions-container" *ngIf="!(isSmallDevice$ | async)">
+        <button mat-button color="primary">
+          <mat-icon> home </mat-icon> HOME
+        </button>
+        <button mat-button color="primary">
+          <mat-icon> settings </mat-icon> SETTINGS
+        </button>
+      </div>
+    </section>
+    <section class="body">
+      <div class="informations">
+        <div class="info-container">
+          <div class="title">Personal data</div>
+          <div class="content">
+            <h5>Bio</h5>
+            <div class="text-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              cumque eligendi veritatis aliquid commodi animi quis repudiandae
+              officia quidem distinctio.
+            </div>
+            <h5>Personal data</h5>
+            <mat-list>
+              <mat-list-item>
+                <div class="list-item-content">
+                  <mat-icon>home</mat-icon>
+                  <div>
+                    <span class="bold">Location: </span>
+                    <span>Italy</span>
+                  </div>
+                </div>
+              </mat-list-item>
+              <mat-list-item>
+                <div class="list-item-content">
+                  <mat-icon>person</mat-icon>
+                  <div>
+                    <span class="bold">Name: </span>
+                    <span>Alexa Amazon</span>
+                  </div>
+                </div>
+              </mat-list-item>
+              <mat-list-item>
+                <div class="list-item-content">
+                  <mat-icon>calendar_month</mat-icon>
+                  <div>
+                    <span class="bold">Birthday: </span>
+                    <span>19/02/1994</span>
+                  </div>
+                </div>
+              </mat-list-item>
+              <mat-list-item>
+                <div class="list-item-content">
+                  <mat-icon>alternate_email</mat-icon>
+                  <div>
+                    <span class="bold">Email: </span>
+                    <span>Alexa@amazon.it</span>
+                  </div>
+                </div>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+        <div class="info-container">
+          <div class="title">Messages</div>
+
+          <div class="messages-container">
+            <mat-card *ngFor="let message of messages">
+              <mat-card-content class="message-card">
+                <div class="picture-box-global small">
+                  <img [src]="message.profilePic" alt="profile" />
+                </div>
+                <div class="message">
+                  <h5>{{ message.author }}</h5>
+                  <p>{{ message.messagePreview }}</p>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </section>
+  </app-background-image-card>
+</div>
