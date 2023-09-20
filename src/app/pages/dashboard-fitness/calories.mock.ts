@@ -1,0 +1,26 @@
+import { LineChartData } from "src/app/models/chartData.interface";
+
+export const yourCaloriesData:LineChartData = [
+    {data:1600,label:'03/09/2023'},
+    {data:1870,label:'04/09/2023'},
+    {data:1600,label:'05/09/2023'},
+    {data:1200,label:'06/09/2023'},
+    {data:1700,label:'07/09/2023'},
+    {data:1770,label:'08/09/2023'},
+    {data:1840,label:'09/09/2023'},
+    {data:1670,label:'10/09/2023'},
+    {data:1900,label:'11/09/2023'},
+    {data:2200,label:'12/09/2023'},
+    {data:1700,label:'13/09/2023'},
+    {data:2530,label:'14/09/2023'},
+    {data:1200,label:'16/09/2023'},
+    {data:1240,label:'17/09/2023'},
+    {data:1990,label:'18/09/2023'},
+    {data:1100,label:'19/09/2023'},
+    {data:1200,label:'20/09/2023'},
+    {data:1230,label:'21/09/2023'},
+    {data:1240,label:'22/09/2023'},
+    {data:1230,label:'23/09/2023'},
+    {data:1110,label:'24/09/2023'},
+    {data:1900,label:'25/09/2023'},
+]

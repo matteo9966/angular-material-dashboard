@@ -1,12 +1,12 @@
-<mat-sidenav-container>
-    <mat-sidenav #sidenav opened mode="side">
+<mat-sidenav-container (backdropClick)="toggleMenu()">
+    <mat-sidenav #sidenav [opened]="showSidenav$|async" [mode]="(sidenavType$|async)!" [disableClose]="true" >
       <div class="sidenav-content">
         <app-dashboard-menu></app-dashboard-menu>
       </div>
     </mat-sidenav>
     <mat-sidenav-content>
       <div class="sidenav-content-container">
-        <app-dashboard-toolbar></app-dashboard-toolbar>
+        <app-dashboard-toolbar (toggleMenu)="toggleMenu()" [showNavbarToggleButton]="(showSmallDeviceMenuButton$|async)!"></app-dashboard-toolbar>
         <router-outlet></router-outlet>
       </div>
       

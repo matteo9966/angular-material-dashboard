@@ -1,0 +1,19 @@
+<mat-card class="chart-container">
+  <mat-card-content class="content">
+    <canvas
+    *ngIf="lineChartData;else nodata"
+    class="line-canvas"
+    baseChart
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="(colorSchematicOptions|async)!"
+    [legend]="lineChartLegend"
+    >
+    </canvas>
+  </mat-card-content>
+</mat-card>
+
+<ng-template #nodata>
+    <div>No data available</div>
+</ng-template>
+

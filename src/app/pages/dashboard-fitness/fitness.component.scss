@@ -1,0 +1,35 @@
+@use "../../../styles/responsive-mixins" as r;
+.fitness-page-body {
+  width: 100%;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+
+  @include r.responsiveMaterial("medium") {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-auto-rows: 250px;
+  }
+}
+.stats-summary {
+  grid-column: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.2rem;
+}
+.app-line-chart {
+  grid-column: 1/-1;
+  @include r.responsiveMaterial("medium") {
+    grid-column: 2 / span 2;
+  }
+}
+.form {
+  grid-column: 1/-1;
+  @include r.responsiveMaterial("medium") {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+  }
+}

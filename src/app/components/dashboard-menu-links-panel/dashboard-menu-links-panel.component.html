@@ -17,7 +17,10 @@
         routerLinkActive="active"
         role="listitem"
         *ngFor="let item of panel.links"
-        ><span class="content">
+        (click)="hideMenu()"
+        ><span class="content"
+        
+        >
           {{ item.label }}
         </span>
       </a>

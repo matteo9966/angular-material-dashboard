@@ -4,7 +4,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { DashboardMenuLinksPanelComponent } from '../dashboard-menu-links-panel/dashboard-menu-links-panel.component';
 import { ROUTES_CONFIG } from 'src/app/config/routes.injection';
-
 //this is a component of the new dashboard page
 @Component({
   selector: 'app-dashboard-menu',
@@ -30,7 +29,7 @@ export class DashboardMenuComponent {
     {
       icon: 'account_circle',
       title: 'Dashboard',
-      links: [
+      links: /*  [
         {
           label: this.routesConfig.dashboard.childRoutes.home.label,
           routerLink: this.routesConfig.dashboard.childRoutes.home.routerLink,
@@ -45,7 +44,11 @@ export class DashboardMenuComponent {
           routerLink:
             this.routesConfig.dashboard.childRoutes.profile.routerLink,
         },
-      ],
+      ] */ Object.values(this.routesConfig.dashboard.childRoutes).map((v) => ({
+        label: v.label,
+        // routerLink: v.routerLink,
+        routerLink: (v).routerLink,
+      })),
     },
   ];
 }

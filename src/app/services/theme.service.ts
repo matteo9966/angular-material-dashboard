@@ -1,18 +1,19 @@
 import { Injectable, inject, Renderer2, RendererFactory2 } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeService {
-  rendererFactory = inject(RendererFactory2);
-  renderer: Renderer2;
 
-  isDark = false;
+
+  private _isDark$ = new BehaviorSubject(false);
+
+  _isDark = false;
   private darkIcon = 'dark_mode';
   private lightIcon = 'light_mode';
 
   constructor() {
-    this.renderer = this.rendererFactory.createRenderer(null, null);
   }
 
   get currentIcon() {
@@ -23,18 +24,20 @@ export class ThemeService {
   }
 
   toggleMode() {
-    this.isDark = !this.isDark;
-    if (this.isDark) {
-      this.addDarkClassToBody();
-    } else {
-      this.removeDarkClassFromBody();
-    }
+    this.isDark = !this.isDark; 
   }
 
-  private removeDarkClassFromBody() {
-    this.renderer.removeClass(document.body, 'dark');
+
+
+  get isDark() {
+    return this._isDark;
   }
-  private addDarkClassToBody() {
-    this.renderer.addClass(document.body, 'dark');
+  set isDark(isDark: boolean) {
+    this._isDark$.next(isDark);
+    this._isDark = isDark;
+  }
+
+  get isDark$() {
+    return this._isDark$.asObservable();
   }
 }

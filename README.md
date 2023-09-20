@@ -1,16 +1,13 @@
-# Angular material - this shows how to customize the theme:
+# Angular material - this shows how to customize the theme
 
-## 1 add angular material:
+I wrote this small project to explore and use Angular Material libary. I was very curious to check out its components and 
+I realized that you can create very modern looking applications using this awesome tool.
+For this project I created a responsive Dashboard with a few pages.
 
-`ng add @angular/material` => add angular material
+- Customized the angular material palette.
+- Added responsive layout using the angular ResponsiveObservable sdk.
 
-## 2 choose custom theme from the cli:
 
-- Choose a prebuilt theme name, or "custom" for a custom theme: Select Custom
-- Set up global Angular Material typography styles?: Yes
-- Set up browser animations for Angular Material?: Yes
-
-## Inside style.scss you should have:
 
 ```scss
 @use "@angular/material" as mat;

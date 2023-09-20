@@ -19,10 +19,16 @@ export const routesConfig = {
         routerLink: '/dashboard/profile',
         label: 'Profile',
       },
+      fitness:{
+        routerPath:'fitness',
+        routerLink:'/dashboard/fitness',
+        label:'Fitness',
+      }
     },
   },
   signup: {
     routerPath: 'signup',
     label: 'Signup',
+    routerLink:''
   },
 } ;

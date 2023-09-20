@@ -1,0 +1,16 @@
+@use '../../../styles/responsive-mixins' as r;
+.content{
+    padding:1rem;
+    max-width: 500px;
+    overflow-x: scroll;
+    @include r.responsiveMaterial('medium'){
+      max-width: 100%;
+      overflow-x: auto;
+    }
+}
+
+
+
+.line-canvas{
+    max-height: 200px;
+}

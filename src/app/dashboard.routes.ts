@@ -23,6 +23,13 @@ export const dashboardroutes: Routes = [
       ),
   },
   {
+    path: routesConfig.dashboard.childRoutes.fitness.routerPath,
+    loadComponent: () =>
+      import('./pages/dashboard-fitness/fitness.component').then(
+        (c) => c.FitnessComponent
+      ),
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: routesConfig.dashboard.childRoutes.home.routerPath,

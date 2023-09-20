@@ -1,7 +1,10 @@
+@use "../../../styles/responsive-mixins" as r;
 .card-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  
-}
 
+  grid-template-columns: 1fr;
+  @include r.responsiveMaterial("medium") {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../../styles/variables" as v;
+.table-container {
+  overflow: hidden;
+  border-radius: v.$global-border-radius;
+}
+
+
+.table-scroll{
+    width: 100%;
+    overflow-y: auto ;
+}
