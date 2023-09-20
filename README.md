@@ -6,6 +6,13 @@ For this project I created a responsive Dashboard with a few pages.
 
 - Customized the angular material palette.
 - Added responsive layout using the angular ResponsiveObservable sdk.
+- theming: both light theme and dark theme are available using angular material theming system
+## Theming:
+  ![image](https://github.com/matteo9966/angular-material-dashboard/assets/75813215/5474e420-31e9-45fe-abec-1de27b2e7de5)
+![image](https://github.com/matteo9966/angular-material-dashboard/assets/75813215/c5a89a14-041e-4aa3-a60c-8f79037b3929)
+
+## Responsive:
+![image](https://github.com/matteo9966/angular-material-dashboard/assets/75813215/56178ea0-388c-4163-9b5b-090475c62b2b)
 
 
 
